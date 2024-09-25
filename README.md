@@ -7,7 +7,11 @@ I needed to log all messages exchanged between Kubelet and Control panel in orde
 
 ### Install Kubernetes on both Ubuntu instances
 
-### Configure Verbose level on Kubelet
+### Configure Verbose level on Kubelet for worker node
 
-### Enable logging on Kubelet Service
+### Enable logging on Kubelet Service for worker node
+
+### Initialize Kubernetes cluster
+
+### Join to Kubernetes cluster
 
