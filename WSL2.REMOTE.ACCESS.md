@@ -3,7 +3,7 @@
 Generally, all connections from WSL2 instance to any devices in same network are open. However, connections from devices in the same LAN is blocked by default. 
 
 1. WSL2 has a virtualized ethernet adapter with its own unique IP address that is not in IP range of the LAN. In order to assign IP address from IP range of the LAN, enable the mirrored mode networking for Linux instance on WSL2 by adding `networkingMode=mirrored` into `.wslconfig` file that exists in `C:\Users\<user name>` folder. If this file doesn't exist, create it and add `networkingMode=mirrored`.  
-2. Shutdown the WSL2 instance and re-run it from PowerShell terminal   
+2. Shutdown the WSL2 instance and re-launch it from PowerShell terminal   
 `wsl -l -v`  
 `wsl --terminate <instance name>`  
 `wsl -d <instance name>`  
@@ -16,5 +16,5 @@ Generally, all connections from WSL2 instance to any devices in same network are
 
 ### References
 
-1. [Accessing a WSL 2 distribution from your local area network (LAN)](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan)
-2. [WSL 2 Setup for SSH Remote Access](https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)
+* [Accessing a WSL 2 distribution from your local area network (LAN)](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan)
+* [WSL 2 Setup for SSH Remote Access](https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)
