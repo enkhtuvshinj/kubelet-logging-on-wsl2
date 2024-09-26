@@ -6,7 +6,8 @@ Kubernetes tools support verbosity levels (`--v=[1-9]`) for logging. Kubelet run
 
 Before adding the verbose level into Kubelet configuration, `sudo kube join --token <token> --discovery-token-ca-cert-hash <hash>` command that is generated from Kubernetes control plane should be run to generate the kubeadm env file.   
 
-1. Append `/var/lib/kubelet/kubeadm-flags.env` file with `--v=[1-9]`.
+1. Append `/var/lib/kubelet/kubeadm-flags.env` file with `--v=[1-9]`.   
+2. After appending the verbose level, `/var/lib/kubelet/kubeadm-flags.env` content looks like:   
 `KUBELET_KUBEADM_ARGS=--cgroup-driver=cgroupfs --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1 --v=[1-9]`   
 2. Restart Kubelet service   
 `sudo systemctl restart kubelet`   
