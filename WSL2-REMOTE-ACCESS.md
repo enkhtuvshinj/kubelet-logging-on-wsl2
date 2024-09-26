@@ -16,5 +16,5 @@ Generally, all connections from WSL2 instance to any devices in same network are
 
 ### References
 
-1. [Accessing a WSL 2 distribution from your local area network (LAN)] (https://learn.microsoft.com/en-us/windows/wsl/)networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan
-2. [WSL 2 Setup for SSH Remote Access] (https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)
+1. [Accessing a WSL 2 distribution from your local area network (LAN)](https://learn.microsoft.com/en-us/windows/wsl/)networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan
+2. [WSL 2 Setup for SSH Remote Access](https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)
