@@ -43,15 +43,20 @@ RestartSec=10
 [Install]
 WantedBy=multi-user.target
 ```   
-4. Reload systemd manager configuration and restart the service.   
+4. Create the log file.   
+`touch  /home/<user_name>/<file_name>.log`   
+5. Reload systemd manager configuration and restart the service.   
 ```
 sudo systemd daemon-reload
 sudo systemd restart kubelet
 ```
-5. Check status of the Kubelet service.   
+6. Check status of the Kubelet service.   
 `sudo systemd status kubelet`   
 
 ## References
 
+* [Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
+* [System Logs](https://kubernetes.io/docs/concepts/cluster-administration/system-logs/)
 * [how to enable kubelet logging verbosity](https://stackoverflow.com/questions/55739315/how-to-enable-kubelet-logging-verbosity)   
 * [How to redirect output of systemd service to a file](https://stackoverflow.com/questions/37585758/how-to-redirect-output-of-systemd-service-to-a-file)
+* [How to run Kubernetes without TLS for Debugging](https://eviatargerzi.medium.com/how-to-run-kubernetes-without-tls-for-debugging-eaf1baea572b)
