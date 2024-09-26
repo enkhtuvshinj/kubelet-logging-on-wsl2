@@ -15,11 +15,11 @@ sudo lsof -i -P -n | grep LISTEN
 ```   
 4. Enable Windows port forwarding from PowerShell terminal   
 ```
-netsh interface portproxy add v4tov4 listenaddress=<windows_local_ip> listenport=<listen_port_on_windows> connectaddress=<wsl_internal_ip>   connectport=<service_port>
+netsh interface portproxy add v4tov4 listenaddress=<listen_ip> listenport=<listen_port> connectaddress=<wsl_ip> connectport=<wsl_port>
 ```   
 5. Enable Inbound rules for the given port in Windows firewall   
 ```
-netsh advfirewall firewall add rule name="<Any name>" dir=in action=allow protocol=TCP localport=<listen_port_on_windows>
+netsh advfirewall firewall add rule name="<Any name>" dir=in action=allow protocol=TCP localport=<listen_port>
 ```   
 
 ### Handy netsh commands
@@ -29,7 +29,7 @@ netsh interface portproxy show all
 ```   
 * Delete the existing portproxy interface:   
 ```
-netsh interface portproxy delete v4tov4 listenport=<listenning_port> listenaddress=<listenning_ip>
+netsh interface portproxy delete v4tov4 listenport=<listen_port> listenaddress=<listen_ip>
 ```   
 
 ### References
