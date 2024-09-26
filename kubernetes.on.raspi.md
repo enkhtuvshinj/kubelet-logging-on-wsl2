@@ -44,3 +44,11 @@ sudo systemctl disable dphys-swapfile
 `sudo cat /lib/systemd/system/kubelet.service`   
 10. Check whether Kubernetes applications were copied.   
 `ls -la /usr/bin/kube*`  
+
+### References
+
+* [A Guide to Building a Kubernetes Cluster with Raspberry Pi’s](https://alexsniffin.medium.com/a-guide-to-building-a-kubernetes-cluster-with-raspberry-pis-23fa4938d420)
+* [Using Kubelet Client to Attack the Kubernetes Cluster](https://www.cyberark.com/resources/threat-research-blog/using-kubelet-client-to-attack-the-kubernetes-cluster)
+* [How to install Kubernetes on Raspberry PI](https://medium.com/karlmax-berlin/how-to-install-kubernetes-on-raspberry-pi-53b4ce300b58)
+* [How to Install Kubernetes Cluster on Ubuntu 22.04](https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/?utm_content=cmp-true)
+* [Kubernetes on Raspbian](https://github.com/alexellis/k8s-on-raspbian)
