@@ -14,7 +14,14 @@ Generally, all connections from WSL2 instance to any devices in same network are
 5. Enable Inbound rules for the given port in Windows firewall   
 `netsh advfirewall firewall add rule name="<Any name>" dir=in action=allow protocol=TCP localport=<listen_port_on_windows>`   
 
+### Handy netsh commands
+* Show all configured portproxy interfaces:   
+`netsh interface portproxy show all`   
+* Delete the existing portproxy interface:   
+`netsh interface portproxy delete v4tov4 listenport=<listenning_port> listenaddress=<listenning_ip>`   
+
 ### References
 
 * [Accessing a WSL 2 distribution from your local area network (LAN)](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan)
-* [WSL 2 Setup for SSH Remote Access](https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)
+* [WSL 2 Setup for SSH Remote Access](https://medium.com/@wuzhenquan/windows-and-wsl-2-setup-for-ssh-remote-access-013955b2f421)   
+* [Netsh interface portproxy commands](https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-interface-portproxy)
