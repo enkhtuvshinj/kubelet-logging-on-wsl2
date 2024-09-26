@@ -3,7 +3,9 @@
 Assume that Ubuntu server or Raspberry light OS has been already installed on the Pi.
 
 1. Update the package lists for upgrades.   
-`sudo apt-get update`   
+```
+sudo apt-get update
+```   
 2. Install all dependencies.   
 ```
 sudo apt install socat
@@ -30,9 +32,13 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 ```   
 6. Install Kubernetes tools from package lists
-`sudo apt install kubeadm kubelet kubectl kubernetes-cni -y`   
+```
+sudo apt install kubeadm kubelet kubectl kubernetes-cni -y
+```   
 7. Switch a memory swap off.
-`sudo swapoff -a`
+```
+sudo swapoff -a
+```
 8. Or run the following to disable swap.   
 ```
 sudo apt-get install dphys-swapfile
@@ -41,9 +47,13 @@ sudo dphys-swapfile uninstall
 sudo systemctl disable dphys-swapfile
 ```
 9. Check whether Kubelet service configuration is created.   
-`sudo cat /lib/systemd/system/kubelet.service`   
+```
+sudo cat /lib/systemd/system/kubelet.service
+```   
 10. Check whether Kubernetes applications were copied.   
-`ls -la /usr/bin/kube*`  
+```
+ls -la /usr/bin/kube*
+```  
 
 ### References
 
