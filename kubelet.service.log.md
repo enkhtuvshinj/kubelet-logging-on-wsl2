@@ -9,8 +9,11 @@ Before adding the verbose level into Kubelet configuration, `sudo kube join --to
 1. Append `/var/lib/kubelet/kubeadm-flags.env` file with `--v=[1-9]`.   
 2. After appending the verbose level, `/var/lib/kubelet/kubeadm-flags.env` content looks like:   
 `KUBELET_KUBEADM_ARGS=--cgroup-driver=cgroupfs --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1 --v=[1-9]`   
-2. Restart Kubelet service   
-`sudo systemctl restart kubelet`   
+2. Restart Kubelet service and check its status.   
+```
+sudo systemctl restart kubelet
+sudo systemd status kubelet
+```   
 
 ### Add a log file to Kubelet service unit configuration
 
@@ -40,12 +43,12 @@ RestartSec=10
 [Install]
 WantedBy=multi-user.target
 ```   
-4. Reload systemd manager configuration and restart the service
+4. Reload systemd manager configuration and restart the service.   
 ```
 sudo systemd daemon-reload
 sudo systemd restart kubelet
 ```
-5. Check status of the Kubelet service
+5. Check status of the Kubelet service.   
 `sudo systemd status kubelet`   
 
 ## References
