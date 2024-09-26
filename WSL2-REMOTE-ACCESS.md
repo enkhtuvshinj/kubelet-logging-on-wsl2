@@ -1,4 +1,4 @@
-# Connecting to WSL2 from devices in LAN
+## Connecting to WSL2 from devices in LAN
 
 Generally, all connections from WSL2 instance to any devices in same network are open. However, connections from devices in the same LAN is blocked by default. 
 
