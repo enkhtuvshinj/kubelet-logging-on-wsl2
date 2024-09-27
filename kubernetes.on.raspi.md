@@ -64,6 +64,11 @@ ls -la /usr/bin/kube*
 
 ### Handy commands
 
+* Please note that Kubernetes control plane should have a Container Network Interface installed. For example, you can run the following to install Flannel. 
+```
+kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+```
+Otherwise, when worker nodes join the clsuter, they faces an error `Container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized`.   
 * Run the following to disable swap.   
 ```
 sudo apt-get install dphys-swapfile
