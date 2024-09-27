@@ -23,7 +23,7 @@ sudo systemd status kubelet
 ```
 sudo systemctl cat kubelet
 ```   
-2. Add below lines into `/lib/systemd/system/kubelet.service`
+2. Add below lines to the bottom of `[Service]` section in `/lib/systemd/system/kubelet.service` file. PLease note that this will create a new file and does not append to the existing file.
 ```
 StandardOutput=file:/home/<user_name>/<file_name>.log
 StandardError=file:/home/<user_name>/<file_name>.log
@@ -35,14 +35,14 @@ Description=kubelet: The Kubernetes Node Agent
 Documentation=https://kubernetes.io/docs/
 Wants=network-online.target
 After=network-online.target
-StandardOutput=file:/home/<user_name>/<file_name>.log
-StandardError=file:/home/<user_name>/<file_name>.log
 
 [Service]
 ExecStart=/usr/bin/kubelet
 Restart=always
 StartLimitInterval=0
 RestartSec=10
+StandardOutput=file:/home/<user_name>/<file_name>.log
+StandardError=file:/home/<user_name>/<file_name>.log
 
 [Install]
 WantedBy=multi-user.target
