@@ -68,7 +68,7 @@ ls -la /usr/bin/kube*
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
-Otherwise, when worker nodes join the clsuter, they faces an error `Container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized`.   
+Otherwise, when worker nodes join the cluster, they faces an error `Container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized`.   
 * Run the following to disable swap.   
 ```
 sudo apt-get install dphys-swapfile
